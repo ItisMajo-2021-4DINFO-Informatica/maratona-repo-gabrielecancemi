@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Cancemi_ProvaComune/1.0.0": {
+        "runtime": {
+          "Cancemi_ProvaComune.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Cancemi_ProvaComune/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
