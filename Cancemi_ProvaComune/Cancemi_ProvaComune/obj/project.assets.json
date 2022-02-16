@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Utente\\Desktop\\Cancemi_ProvaComune\\Cancemi_ProvaComune\\Cancemi_ProvaComune.csproj",
+      "projectUniqueName": "C:\\Users\\Utente\\Desktop\\maratona-repo-gabrielecancemi\\Cancemi_ProvaComune\\Cancemi_ProvaComune\\Cancemi_ProvaComune.csproj",
       "projectName": "Cancemi_ProvaComune",
-      "projectPath": "C:\\Users\\Utente\\Desktop\\Cancemi_ProvaComune\\Cancemi_ProvaComune\\Cancemi_ProvaComune.csproj",
+      "projectPath": "C:\\Users\\Utente\\Desktop\\maratona-repo-gabrielecancemi\\Cancemi_ProvaComune\\Cancemi_ProvaComune\\Cancemi_ProvaComune.csproj",
       "packagesPath": "C:\\Users\\Utente\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Utente\\Desktop\\Cancemi_ProvaComune\\Cancemi_ProvaComune\\obj\\",
+      "outputPath": "C:\\Users\\Utente\\Desktop\\maratona-repo-gabrielecancemi\\Cancemi_ProvaComune\\Cancemi_ProvaComune\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",

@@ -20,6 +20,9 @@ namespace Cancemi_ProvaComune
             int minuti = 0;
 
             int ore = int.Parse(tempo.Substring(0, 2));
+            int minutiParziali = int.Parse(tempo.Substring(3, 2));
+
+            minuti = (ore * 60) + minutiParziali;
 
             return minuti;
         }

@@ -46,7 +46,7 @@ namespace Cancemi_ProvaComune
                     atleta.Nome = elementi[0];
                     atleta.Società = elementi[1];
                     atleta.Tempo = maratona.CalcolaTempo(elementi[2]);
-                    atleta.Città = elementi[4];
+                    atleta.Città = elementi[3];
 
                     maratona.AggiungiElemento(atleta);
 
@@ -55,6 +55,16 @@ namespace Cancemi_ProvaComune
 
 
             }
+        }
+
+        private void btnTempo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnAtleti_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

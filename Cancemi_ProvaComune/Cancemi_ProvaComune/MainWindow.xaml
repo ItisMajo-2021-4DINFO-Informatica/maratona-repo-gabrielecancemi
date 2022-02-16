@@ -7,8 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
-        <ListBox x:Name="lstLista" Height="131"/>
-        <Button x:Name="btnLeggi" Content="Button" Click="btnLeggi_Click"/>
+        <DataGrid x:Name="lstLista" Height="100"/>
+        <Button x:Name="btnLeggi" Content="Leggi" Click="btnLeggi_Click"/>
+        <Label x:Name="lblAtleta" Content="Nome Atleta"/>
+        <TextBox x:Name="txtAtleta" Text="" TextWrapping="Wrap"/>
+        <Label x:Name="lblCitta" Content="Città"/>
+        <TextBox x:Name="txtCitta" Text="" TextWrapping="Wrap"/>
+        <Button x:Name="btnTempo" Content="Visualizza tempo impiegato" Click="btnTempo_Click"/>
+        <Label x:Name="lblTempo" Content=""/>
+        <Button x:Name="btnAtleti" Content="Visualizza atleti" Click="btnAtleti_Click"/>
+        <Label x:Name="lblAtleti" Content=""/>
+
+
 
 
     </StackPanel>
