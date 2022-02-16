@@ -31,34 +31,19 @@ namespace Cancemi_ProvaComune
 
         private void btnLeggi_Click(object sender, RoutedEventArgs e)
         {
-            using (FileStream flusso = new FileStream("dati.txt", FileMode.Open, FileAccess.Read))
-            {
-
-                StreamReader reader = new StreamReader(flusso);
-                while (!reader.EndOfStream)
-                {
-                    var atleta = new Atleta();
-
-                    string linea = reader.ReadLine();
-                    string[] elementi = linea.Split('%');
-                    
-
-                    atleta.Nome = elementi[0];
-                    atleta.Società = elementi[1];
-                    atleta.Tempo = maratona.CalcolaTempo(elementi[2]);
-                    atleta.Città = elementi[3];
-
-                    maratona.AggiungiElemento(atleta);
-
-                }
-                lstLista.Items.Refresh();
 
 
-            }
+            maratona.Leggi();
+            lstLista.Items.Refresh();
         }
 
         private void btnTempo_Click(object sender, RoutedEventArgs e)
         {
+            string nome = txtAtleta.Text;
+            string città = txtCitta.Text;
+                
+            lblTempo.Content = maratona.Tempo(nome, città);
+
 
         }
 
