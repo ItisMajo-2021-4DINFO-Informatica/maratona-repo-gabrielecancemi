@@ -10,7 +10,7 @@ namespace Cancemi_ProvaComune
     {
         public string Nome { get; set; }
         public string Società { get; set; }
-        public int Tempo { get; set; }
+        public string Tempo { get; set; }
         public string Città { get; set; }
     }
 }

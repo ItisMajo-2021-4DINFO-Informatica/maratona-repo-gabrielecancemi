@@ -36,11 +36,53 @@ namespace Cancemi_ProvaComune
             {
                 if(atleta.Nome == nome && atleta.Città == città)
                 {
-                    minuti = atleta.Tempo;
+                    minuti = CalcolaTempo(atleta.Tempo);
                 }
             }
 
             return minuti;
+        }
+
+
+        public string TrovaAtleti(string città)
+        {
+            string atleti = "";
+
+            foreach (var atleta in lista)
+            {
+                if (atleta.Città == città)
+                {
+                    atleti += atleta.Nome + ";  ";
+                }
+            }
+
+            return atleti;
+        }
+
+
+        public void InserisciElemento(string nome, string società, string ore, string minuti, string città)
+        {
+            bool esiste = false;
+
+            foreach (var atleta in lista)
+            {
+                if (atleta.Città == città && atleta.Nome == nome)
+                {
+                    esiste = true;
+                }
+            }
+
+            if(esiste == false)
+            {
+                var atleta = new Atleta();
+                atleta.Nome = nome;
+                atleta.Società = società;
+                atleta.Città = città;
+                atleta.Tempo = ore + "h" + minuti + "m";
+
+                AggiungiElemento(atleta);
+            }
+
         }
 
 
@@ -60,13 +102,53 @@ namespace Cancemi_ProvaComune
 
                     atleta.Nome = elementi[0];
                     atleta.Società = elementi[1];
-                    atleta.Tempo = CalcolaTempo(elementi[2]);
+                    atleta.Tempo = elementi[2];
                     atleta.Città = elementi[3];
 
                     AggiungiElemento(atleta);
 
                 }
                 
+
+
+            }
+        }
+
+
+
+        public void Stampa( string nome, string città)
+        {
+            string tempo = "";
+           
+            
+            foreach(var atleta in lista)
+            {
+                if(atleta.Nome == nome && atleta.Città == città)
+                {
+                    tempo = atleta.Tempo;
+                }
+            }
+
+            string elenco = "";
+
+            foreach (var atleta in lista)
+            {
+                if (CalcolaTempo(atleta.Tempo) < CalcolaTempo(tempo) && atleta.Città == città)
+                {
+                    elenco += atleta.Nome + "\n";
+                }
+            }
+
+
+            string nomeFile = nome + "%" + tempo + ".txt";
+
+            using (FileStream flusso = new FileStream(nomeFile, FileMode.Create, FileAccess.Write))
+            {
+
+                StreamWriter writer = new StreamWriter(flusso);
+
+                writer.WriteLine(elenco);
+                writer.Flush();
 
 
             }

@@ -32,7 +32,6 @@ namespace Cancemi_ProvaComune
         private void btnLeggi_Click(object sender, RoutedEventArgs e)
         {
 
-
             maratona.Leggi();
             lstLista.Items.Refresh();
         }
@@ -49,7 +48,31 @@ namespace Cancemi_ProvaComune
 
         private void btnAtleti_Click(object sender, RoutedEventArgs e)
         {
+            string città = txtCitta.Text;
+            lblAtleti.Content = maratona.TrovaAtleti(città);
+        }
 
+        private void btnInserisci_Click(object sender, RoutedEventArgs e)
+        {
+            string nome = txtNomeNuovo.Text;
+            string società = txtSocietaNuovo.Text;
+            string ore = txtOreNuovo.Text;
+            string minuti = txtMinutiNuovo.Text;
+            string città = txtCittaNuovo.Text;
+
+            maratona.InserisciElemento(nome, società, ore, minuti, città);
+            lstLista.Items.Refresh();
+
+
+
+        }
+
+        private void btnStampa_Click(object sender, RoutedEventArgs e)
+        {
+            string nome = txtAtleta.Text;
+            string città = txtCitta.Text;
+
+            maratona.Stampa(nome, città);
         }
     }
 }
